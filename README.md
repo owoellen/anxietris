@@ -21,7 +21,6 @@ yeah!
 
 #### Why won't you say the other features?
 
-ELEMENT OF SURPRISE!
 ![the element of surprise!!!](https://c.tenor.com/CpMcOSzFKwYAAAAC/tenor.gif)
 
 
