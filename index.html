@@ -82,34 +82,26 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. --><head>
 	</div>
 	<div id="instr">
 
-		<h1>HTML5 Tetris</h1>
-		<p> Touch events are now supported! Play on iOS and Android: <br>
-		Swipe anywhere to move, tap to rotate (Can also tap while swiping to rotate). Swipe down to drop.
-		</p>
+		<h1><strong>Instructions</strong></h1>
+		<h3>Controls</h3>
+
+		<h5>Keyboard</h5>
+
+		<p>Left & Right Arrow Keys - Move Piece</p>
+		<p>Up Arrow Key - Rotate Piece (general)</p>
+		<p>Down Arrow Key - Drop Piece</p>
+		<p>Z & X Keys - Rotate Piece (left & right respectively)</p>
+		<p>D Key - Instant Drop Piece</p>
+
+		
+
+		<h3>Settings</h3>
 		<p>
 		Touch Sensitivity:
 		<input id="sens_range" type="range" min="0.2" max="5" step="0.05" value="1" onchange="TETRIS.setTouchSensitivity(this.value); document.getElementById(&quot;sensitivity&quot;).innerHTML = Math.round(this.value*1000)/1000;">
 		<span id="sensitivity">1</span>
 		</p>
-
-
-		<p> For PC/Mac: Use the Arrow keys to move and rotate, spacebar to drop.
-		Z,X to rotate in either direction. </p>
-		<p> Pause: P</p>
-		<p> Mouse control (toggle): M<br>
-		left click to rotate and right click to drop. Mouse control is experimental.
-		</p>
-		<p> To start a new game, refresh the page (F5)! </p>
-		<p>This is an infinite tetris game. It does not speed up.
-		To score more points, drop pieces as fast
-		as you can!</p>
-		<p>Changes coming soon (To do list): </p>
-		<ul>
-		<li>Centered positioning of board</li>
-		<li>Preview next piece(s)</li>
-		<li>More visual effects and animations: CSS3 transitions for animation, with fallback to JS animation. In particular I want a satisfying effect for the hard drop.</li>
-		</ul>
-		<p><input type="button" onclick="var result = TETRIS.toggle_touch_draw(); if (result) {this.value = &quot;Turn Touch Debug Off&quot;; } else { this.value=&quot;Turn Touch Debug On&quot;;}" value="Toggle touch debug"></p>
+		<p style="display:none;"><input type="button" onclick="var result = TETRIS.toggle_touch_draw(); if (result) {this.value = &quot;Turn Touch Debug Off&quot;; } else { this.value=&quot;Turn Touch Debug On&quot;;}" value="Toggle touch debug"></p>
 
 	</div>
 </div>
