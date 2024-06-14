@@ -27,4 +27,4 @@ yeah!
 ## Acknowledgements
 
  - Steven Lu (thanks for the tetris)
- that's it
+ - that's it
