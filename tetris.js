@@ -848,19 +848,7 @@ function drawShadow(context) {
 }
 
 function drawShadowPieceAt(context, gridX, gridY) {
-	var currerPiece
-	if curPiece < 6 {
-
-		currerPiece = curPiece++
-		
-	}
-	else {
-
-		curPiece = 0
-		
-	}
-	
-  tetk = tetrominos[currerPiece][curRotation];
+tetk = tetrominos[currerPiece][curRotation];
   context.clearRect(0,0,xoff*2 + xsize*10 + gapsize*9,yoff*2+ysize*24+gapsize*23);
   context.save();
   context.fillStyle = "#777";
