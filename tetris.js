@@ -86,11 +86,11 @@ var xsize = 15;
 var ysize = 15;
 var gapsize = 2;
 var bordersize = 2;
-// white, red, green, blue, purple, yellow, orange, cyan
-// None,  Z,   S,     J,    T,      O,      L,      I
+// white, red, green, blue, purple, yellow, orange, cyan, off yellow
+// None,  Z,   S,     J,    T,      O,      L,      I,	  also O
 var colors = ["#999","#F00","#0F0",
 			  "#22F","#F0F", "#FF0",
-			  "#F70","#0EE"];
+			  "#F70","#0EE","#F0FFBA"];
 function drawBox(position, value, context) {
   var i = position % 10;
   var j = (position-i) / 10;
@@ -413,13 +413,13 @@ function win_onload() {
 // location depending on orientation and cw vs ccw rotation.
 // todo: Implement this :) --- hopefully without enumerating
 // all possible cases
-var tetromino_Z = [[[1,1],[0,1,1]],[[0,0,1],[0,1,1],[0,1]],[[],[1,1],[0,1,1]],[[0,1],[1,1],[1]]];
-var tetromino_S = [[[0,2,2],[2,2]],[[0,2],[0,2,2],[0,0,2]],[[],[0,2,2],[2,2]],[[2],[2,2],[0,2]]];
-var tetromino_J = [[[3],[3,3,3]],[[0,3,3],[0,3],[0,3]],[[],[3,3,3],[0,0,3]],[[0,3],[0,3],[3,3]]];
-var tetromino_T = [[[0,4],[4,4,4]],[[0,4],[0,4,4],[0,4]],[[],[4,4,4],[0,4]],[[0,4],[4,4],[0,4]]];
-var tetromino_O = [[[5,5],[5,5]]];
-var tetromino_L = [[[0,0,6],[6,6,6]],[[0,6],[0,6],[0,6,6]],[[],[6,6,6],[6]],[[6,6],[0,6],[0,6]]];
-var tetromino_I = [[[],[7,7,7,7]],[[0,0,7],[0,0,7],[0,0,7],[0,0,7]],[[],[],[7,7,7,7]],[[0,7],[0,7],[0,7],[0,7]]];
+var tetromino_Z = [[[1,1],[0,1,1]],[[0,1],[0,1,1],[0,0,1]],[[],[1,1],[0,1,1]],[[1],[1,1],[0,1]]];
+var tetromino_S = [[[0,2,2],[2,2]],[[0,0,2],[0,2,2],[0,2]],[[],[0,2,2],[2,2]],[[0,2],[2,2],[2]]];
+var tetromino_J = [[[3],[3,3,3]],[[3,3],[0,3],[0,3]],[[],[3,3,3],[0,0,3]],[[0,3],[0,3],[0,3,3]]];
+var tetromino_T = [[[0,4],[0,4,4],[0,4]],[[0,4],[4,4],[0,4]],[[0,4],[4,4,4]],[[],[4,4,4],[0,4]]];
+var tetromino_O = [[[5,8],[5,5]]];
+var tetromino_L = [[[0,0,6],[6,6,6]],[[0,6],[0,6],[6,6]],[[],[6,6,6],[6]],[[0,6,6],[0,6],[0,6]]];
+var tetromino_I = [[[],[7,7,7]],[[0,0,7],[0,0,7],[0,0,7]],[[],[],[7,7,7]],[[0,7],[0,7],[0,7]]];
 // tetromino geometry data
 var tetrominos = [tetromino_Z,tetromino_S,tetromino_J,tetromino_T,tetromino_O,tetromino_L,tetromino_I];
 // this is for the rotation animation -- must know where in local
@@ -469,7 +469,7 @@ function gameWin() {
   setPause(true);
 }
 function gameOver() {
-  drawMessage("Game Over", 1.45);
+  drawMessage("oopsies :3", 1.45);
   setPause(true);
   //Cleanup
 
@@ -848,7 +848,19 @@ function drawShadow(context) {
 }
 
 function drawShadowPieceAt(context, gridX, gridY) {
-  tetk = tetrominos[curPiece][curRotation];
+	var currerPiece
+	if curPiece < 6 {
+
+		currerPiece = curPiece++
+		
+	}
+	else {
+
+		curPiece = 0
+		
+	}
+	
+  tetk = tetrominos[currerPiece][curRotation];
   context.clearRect(0,0,xoff*2 + xsize*10 + gapsize*9,yoff*2+ysize*24+gapsize*23);
   context.save();
   context.fillStyle = "#777";
