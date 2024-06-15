@@ -86,11 +86,11 @@ var xsize = 15;
 var ysize = 15;
 var gapsize = 2;
 var bordersize = 2;
-// white, red, green, blue, purple, yellow, orange, cyan, off yellow
-// None,  Z,   S,     J,    T,      O,      L,      I,	  also O
+// white, red, green, blue, purple, yellow, orange, cyan
+// None,  Z,   S,     J,    T,      O,      L,      I
 var colors = ["#999","#F00","#0F0",
 			  "#22F","#F0F", "#FF0",
-			  "#F70","#0EE","#F0FFBA"];
+			  "#F70","#0EE"];
 function drawBox(position, value, context) {
   var i = position % 10;
   var j = (position-i) / 10;
