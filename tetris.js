@@ -417,9 +417,9 @@ var tetromino_Z = [[[1,1],[0,1,1]],[[0,1],[0,1,1],[0,0,1]],[[],[1,1],[0,1,1]],[[
 var tetromino_S = [[[0,2,2],[2,2]],[[0,0,2],[0,2,2],[0,2]],[[],[0,2,2],[2,2]],[[0,2],[2,2],[2]]];
 var tetromino_J = [[[3],[3,3,3]],[[3,3],[0,3],[0,3]],[[],[3,3,3],[0,0,3]],[[0,3],[0,3],[0,3,3]]];
 var tetromino_T = [[[0,4],[0,4,4],[0,4]],[[0,4],[4,4],[0,4]],[[0,4],[4,4,4]],[[],[4,4,4],[0,4]]];
-var tetromino_O = [[[5,8],[5,5]]];
+var tetromino_O = [[[5,5],[5,5]]];
 var tetromino_L = [[[0,0,6],[6,6,6]],[[0,6],[0,6],[6,6]],[[],[6,6,6],[6]],[[0,6,6],[0,6],[0,6]]];
-var tetromino_I = [[[],[7,7,7]],[[0,0,7],[0,0,7],[0,0,7]],[[],[],[7,7,7]],[[0,7],[0,7],[0,7]]];
+var tetromino_I = [[[],[7,7,7]],[[0,0,7],[0,0,7],[0,0,7],[[],[],[7,7,7]],[[0,7],[0,7],[0,7]];
 // tetromino geometry data
 var tetrominos = [tetromino_Z,tetromino_S,tetromino_J,tetromino_T,tetromino_O,tetromino_L,tetromino_I];
 // this is for the rotation animation -- must know where in local
